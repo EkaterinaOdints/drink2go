@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
+
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="main-header">
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__logo" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./images/logo/logo-desktop.svg" type="image/svg+xml" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="./images/logo/logo-tablet.svg" type="image/svg+xml" width="82" height="36">
+            <img src="./images/logo/logo-mobile.svg" type="image/svg+xml" width="32" height="36" alt="Логотип Drink2Go">
+          </picture>
+        </a>
+        <p class="main-header__logo-description">
+          Интернет-магазин кофейных напитков
+        </p>
+      </div>
+      <nav class="main-header__navigation main-navigation">
+        <ul class="main-navigation__user-list user-list list-reset">
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link--user" href="#">
+              <span class="user-list__link-description">Войти</span>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link--busket" href="#">
+              <span class="user-list__link-description">Корзина</span>
+            </a>
+          </li>
+        </ul>
+        <button class="main-navigation__toggle" type="button">
+          <span class="main-navigation__toggle-image">
+            <span class="visually-hidden">Открыть меню</span>
+          </span>
+        </button>
+        <ul class="main-navigation__menu-list menu-list list-reset">
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link--current">Главная</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Каталог</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Доставка</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <h1>Страница для старта</h1>
+
     </main>
+    <footer class="main-footer">
+
+    </footer>
   </body>
+
 </html>
