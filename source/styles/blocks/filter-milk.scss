@@ -25,16 +25,6 @@
     height: 16px;
     border-radius: 50%;
   }
-
-  &:hover:not(.filter-milk__input:checked + .filter-milk__mark),
-  &:hover:not(.filter-milk__input:disabled + .filter-milk__mark),
-  &:focus:not(.filter-milk__input:checked + .filter-milk__mark) {
-    border-color: $alt-primary-lighter;
-
-    &::after {
-      background-color: $alt-primary-opacity;
-    }
-  }
 }
 
 .filter-milk__input:checked + .filter-milk__mark {
@@ -59,6 +49,30 @@
     border-color: $alt-light-grey;
     cursor: default;
     background-color: transparent;
+  }
+
+  &:hover + .filter-milk__mark,
+  &:focus + .filter-milk__mark {
+    border-color: $alt-primary-lighter;
+
+    &::after {
+      background-color: $alt-primary-opacity;
+    }
+  }
+
+  &:hover:checked + .filter-milk__mark,
+  &:focus:checked + .filter-milk__mark {
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+
+  &:hover:disabled + .filter-milk__mark {
+    border-color: $alt-light-grey;
+
+    &::after {
+      background-color: $base-white;
+    }
   }
 
   &.disabled:checked + .filter-milk__mark,

@@ -41,6 +41,8 @@
 }
 
 .pagination-list__link--direction {
+  opacity: 0;
+
   @media (max-width: 767px) {
     position: relative;
 
@@ -75,8 +77,8 @@
   }
 }
 
-.pagination-list__link--direction:not(.pagination-list__link--direction[href]) {
-  opacity: 0;
+.pagination-list__link--direction[href] {
+  opacity: 1;
 }
 
 .pagination-list__link--prev {

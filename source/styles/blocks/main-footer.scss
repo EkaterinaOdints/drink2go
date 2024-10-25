@@ -2,18 +2,18 @@
   padding: 20px 20px 30px;
   display: grid;
   grid-template-areas:
-  "logo social"
-  "navigation navigation"
-  "media media"
-  "contacts contacts"
-  "developers developers";
+    "logo       social"
+    "navigation navigation"
+    "media      media"
+    "contacts   contacts"
+    "developers developers";
   gap: 41px 38px;
 
   @media (min-width: $tablet-width) {
     grid-template-areas:
-    "logo . social"
-    "navigation media contacts"
-    "developers developers developers";
+      "logo       .          social"
+      "navigation media      contacts"
+      "developers developers developers";
     padding: 39px 20px 40px;
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
@@ -21,9 +21,9 @@
 
   @media (min-width: $desktop-width) {
     grid-template-areas:
-    "logo navigation media contacts"
-    "social navigation media contacts"
-    "developers developers developers developers";
+      "logo       navigation media      contacts"
+      "social     navigation media      contacts"
+      "developers developers developers developers";
     grid-template-columns: repeat(4, 1fr);
     padding: 40px;
     row-gap: 20px;

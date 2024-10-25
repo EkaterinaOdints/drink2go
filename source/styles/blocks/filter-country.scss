@@ -26,13 +26,6 @@
     background-color: $base-white;
     transition: 0.1s;
   }
-
-  &:hover:not(.filter-country__input:checked + .filter-country__mark),
-  &:hover:not(.filter-country__input:disabled + .filter-country__mark),
-  &:focus:not(.filter-country__input:checked + .filter-country__mark) {
-    background-color: $alt-primary-opacity;
-    box-shadow: 0 0 0 2px inset $alt-primary-lighter;
-  }
 }
 
 .filter-country__input:checked + .filter-country__mark {
@@ -64,5 +57,22 @@
     &::after {
       background-color: $base-grey;
     }
+  }
+
+  &:hover + .filter-country__mark,
+  &:focus + .filter-country__mark {
+    background-color: $alt-primary-opacity;
+    box-shadow: 0 0 0 2px inset $alt-primary-lighter;
+  }
+
+  &:hover:checked + .filter-country__mark,
+  &:focus:checked + .filter-country__mark {
+    box-shadow: none;
+    background-color: $base-primary;
+  }
+
+  &:hover:disabled + .filter-country__mark {
+    background-color: $alt-light-grey;
+    box-shadow: none;
   }
 }
