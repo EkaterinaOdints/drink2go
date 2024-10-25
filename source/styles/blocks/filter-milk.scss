@@ -1,0 +1,70 @@
+.filter-milk__label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-milk__mark {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-grey;
+  border-radius: 50%;
+  transition: 0.1s;
+  cursor: pointer;
+  background-color: $base-white;
+  flex-shrink: 0;
+
+  &::after {
+    position: relative;
+    content: "";
+    top: 2px;
+    left: 2px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  &:hover:not(.filter-milk__input:checked + .filter-milk__mark),
+  &:hover:not(.filter-milk__input:disabled + .filter-milk__mark),
+  &:focus:not(.filter-milk__input:checked + .filter-milk__mark) {
+    border-color: $alt-primary-lighter;
+
+    &::after {
+      background-color: $alt-primary-opacity;
+    }
+  }
+}
+
+.filter-milk__input:checked + .filter-milk__mark {
+  border-color: $base-primary;
+  position: relative;
+
+  &::after {
+    background-color: $base-primary;
+  }
+}
+
+.filter-milk__input {
+  display: none;
+
+  &.disabled ~ .filter-milk__value,
+  &:disabled ~ .filter-milk__value {
+    color: $base-grey;
+  }
+
+  &.disabled + .filter-milk__mark,
+  &:disabled + .filter-milk__mark {
+    border-color: $alt-light-grey;
+    cursor: default;
+    background-color: transparent;
+  }
+
+  &.disabled:checked + .filter-milk__mark,
+  &:disabled:checked + .filter-milk__mark {
+    &::after {
+      background-color: $alt-light-grey;
+    }
+  }
+}

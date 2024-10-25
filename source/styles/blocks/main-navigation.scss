@@ -3,6 +3,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row-reverse;
+    flex-grow: 1;
   }
 }
 
@@ -10,13 +11,15 @@
   border: 0;
   padding: 22px;
   background-color: transparent;
+  display: flex;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 
-  &:hover {
-    cursor: pointer;
+  &:active {
+    background-color: $base-secondary;
   }
 }
 
@@ -25,5 +28,4 @@
   height: 12px;
   background-image: url("../../icons/stack.svg#menu");
   background-repeat: no-repeat;
-  display: block;
 }

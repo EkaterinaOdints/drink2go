@@ -1,12 +1,13 @@
 .user-list {
   display: flex;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     margin-left: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 162px;
+    margin-left: auto;
     gap: 20px;
   }
 }
@@ -25,7 +26,7 @@
     display: block;
     mask-position: center;
     mask-repeat: no-repeat;
-    background-color: #333333;
+    background-color: $black;
   }
 
   @media (min-width: $tablet-width) {
@@ -58,7 +59,6 @@
 .user-list__link--busket {
   &::after {
     mask-image: url("../../icons/stack.svg#busket");
-    background-color: #333333;
   }
 }
 
@@ -67,7 +67,7 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-    color: #333333;
+    color: $black;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 16px;
