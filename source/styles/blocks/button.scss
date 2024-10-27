@@ -1,0 +1,27 @@
+.button {
+  background-color: $base-primary;
+  color: $base-white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $alt-primary-lighter;
+  }
+
+  &:active {
+    background-color: $alt-primary-darker;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: $base-grey;
+    cursor: default;
+    color: $base-white;
+  }
+}

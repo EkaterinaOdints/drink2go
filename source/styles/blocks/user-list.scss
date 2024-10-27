@@ -1,0 +1,76 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+    gap: 20px;
+  }
+}
+
+.user-list__link {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  padding: 22px;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $black;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 21px;
+  }
+
+  &:hover .user-list__link-description {
+    color: $base-primary;
+  }
+
+  &:hover::after {
+    background-color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+.user-list__link--user {
+  &::after {
+    mask-image: url("../../icons/stack.svg#user");
+  }
+}
+
+.user-list__link--busket {
+  &::after {
+    mask-image: url("../../icons/stack.svg#busket");
+  }
+}
+
+.user-list__link-description {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    color: $black;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+}

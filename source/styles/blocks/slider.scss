@@ -1,0 +1,155 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__container {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: 0.2s;
+}
+
+.slider__buttons-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    height: 77%;
+  }
+}
+
+.slider__button {
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  z-index: 5;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-left: 2px solid $base-primary;
+    border-bottom: 2px solid $base-primary;
+    transform: rotate(45deg);
+    top: 321px;
+    left: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+
+    &::before {
+      top: 313px;
+      left: 36px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 350px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to right, $base-white, transparent);
+  }
+
+  &:active {
+    background: linear-gradient(to right, rgba(120, 89, 207, 0.25), transparent);
+  }
+
+  &:disabled,
+  &.disabled {
+    &::before {
+      border-left: 2px solid $base-grey;
+      border-bottom: 2px solid $base-grey;
+    }
+    cursor: default;
+    background: transparent;
+  }
+}
+
+.slider__button--next {
+  &::before {
+    transform: rotate(-135deg);
+    left: -1px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 313px;
+      left: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 350px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to left, $base-white, transparent);
+  }
+
+  &:active {
+    background: linear-gradient(to left, rgba(120, 89, 207, 0.25), transparent);
+  }
+
+  &:disabled,
+  &.disabled {
+    background: transparent;
+  }
+}
+
+.slider__radio-wrap {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  bottom: 60px;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+
+  @media (max-width: 1439px) {
+    display: none;
+  }
+}
+
+.slider__radio-input {
+  display: none;
+}
+
+.slider__radio-mark {
+  width: 62px;
+  height: 4px;
+  display: block;
+  background-color: $base-white;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 24px;
+    position: relative;
+    bottom: 10px;
+  }
+}
+
+.slider__radio-input:checked + .slider__radio-mark {
+  background-color: $base-primary;
+}

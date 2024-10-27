@@ -1,0 +1,140 @@
+.filter-price__range-number::placeholder {
+  color: $base-grey;
+}
+
+.filter-price__range-wrap {
+  display: flex;
+  gap: 44px;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    gap: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 50px;
+  }
+}
+
+.filter-price__range-number {
+  border: 2px solid $alt-primary-lighter;
+  border-radius: 4px;
+  width: 118px;
+  padding: 6px 10px;
+  text-align: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-appearance: none;
+    margin: 0;
+    background-color: $base-white;
+  }
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -moz-appearance: textfield;
+
+  &:hover,
+  &:focus {
+    border-color: $alt-primary-darker;
+    outline: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    border-color: $alt-light-grey;
+    color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.filter-price__slider .noUi-handle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-primary;
+  border-radius: 50%;
+  top: -11px;
+  cursor: pointer;
+  right: -12px;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      position: relative;
+      top: -18px;
+      left: 2px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $alt-primary-opacity;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+}
+
+
+.noUi-base {
+  background-color: $alt-light-grey;
+  height: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.noUi-connect {
+  background-color: $base-primary;
+}
+
+.noUi-connects {
+  height: 4px;
+}
+
+.noUi-target {
+  height: 2px;
+  border: none;
+}
+
+.filter-price__slider {
+  width: 256px;
+  margin: 10px 12px 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    margin: 10px 12px 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 304px;
+    margin: 10px 12px 34px;
+  }
+}
+
+.filter-price__slider[disabled] .noUi-handle {
+  border: 2px solid $base-grey;
+  cursor: default;
+
+  &::after {
+    background-color: $base-white;
+  }
+}

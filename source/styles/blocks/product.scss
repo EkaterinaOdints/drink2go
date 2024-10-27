@@ -1,0 +1,82 @@
+.product {
+  padding: 40px 20px 20px;
+  background-color: $base-white;
+  border-radius: 4px;
+  min-height: 420px;
+
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px;
+  }
+}
+
+.product__link {
+  text-decoration: none;
+}
+
+.product__image {
+  margin: 0 auto 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 30px;
+  }
+}
+
+.product__name {
+  color: $black;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 10px;
+  }
+}
+
+.product__description {
+  color: $black;
+  font-weight: 400;
+  margin: 0 0 16px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px;
+  }
+}
+
+.product__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__price {
+  display: block;
+  color: $black;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.product__order-button {
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 46px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    background-image: url("../../icons/stack.svg#busket-add");
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 20px;
+    top: 10px;
+  }
+}

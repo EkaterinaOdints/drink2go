@@ -1,0 +1,72 @@
+.advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 339px;
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 318px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.advantage::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.advantage--speed::before {
+  background-image: url("./../../icons/clock.svg");
+}
+
+.advantage--convenience::before {
+  background-image: url("./../../icons/pocket.svg");
+}
+
+.advantage--energy::before {
+  background-image: url("./../../icons/lightning.svg");
+}
+
+.advantage--ecology::before {
+  background-image: url("./../../icons/leaf.svg");
+}
+
+.advantage__name {
+  margin: 0;
+  padding: 10px 0 4px;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 0 0 10px;
+  }
+}
+
+.advantage__description {
+  font-weight: 400;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 267px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 317px;
+  }
+}
